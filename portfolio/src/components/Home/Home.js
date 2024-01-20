@@ -6,7 +6,7 @@ import gif2 from "../../Assets/Animation.gif";
 import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
-
+import { LinkPreview } from '@dhaiwat10/react-link-preview';
 function Home() {
   return (
     <section>
