@@ -47,7 +47,7 @@ function About() {
         <h1 className="project-heading">
           Other 
           <strong className="purple"> Tools </strong> 
-          I use
+          for Design and Photography
         </h1>
         <Softskills />
           

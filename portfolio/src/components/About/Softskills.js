@@ -1,6 +1,5 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
-import { CgCPlusPlus } from "react-icons/cg";
 import {
  
     DiIllustrator,
@@ -8,10 +7,8 @@ import {
 
 } from "react-icons/di";
 import {
-    SiSolidity,
     SiAdobelightroom,
 } from "react-icons/si";
-import { TbBrandGolang } from "react-icons/tb";
 import { AiFillCamera } from "react-icons/ai";
 function Softskills() {
   return (
@@ -25,9 +22,9 @@ function Softskills() {
       <Col xs={4} md={2} className="tech-icons">
         <DiIllustrator />
       </Col>
-        <Col xs={4} md={2} className="tech-icons">
-            <SiAdobelightroom />
-          </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiAdobelightroom />
+      </Col>
 
           
     </Row>

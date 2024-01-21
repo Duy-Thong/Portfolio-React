@@ -4,13 +4,13 @@ import myImg from "../../Assets/somedia.png";
 import Tilt from "react-parallax-tilt";
 import {
   AiFillGithub,
-  AiOutlineTwitter,
   AiFillInstagram,
   AiFillFacebook,
-  AiFillMessage,
   AiFillMail,
+
 } from "react-icons/ai";
-import { FaLinkedinIn } from "react-icons/fa";
+import { TiSocialFlickrCircular } from "react-icons/ti";
+
 
 function Home2() {
   return (
@@ -90,6 +90,16 @@ function Home2() {
                   className="icon-colour home-social-icons"
                 >
                   <AiFillInstagram />
+                </a>
+              </li>
+              <li className="social-icons">
+                <a
+                  href="https://www.flickr.com/photos/188231367@N03/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon-colour home-social-icons"
+                >
+                  <TiSocialFlickrCircular />
                 </a>
               </li>
             </ul>

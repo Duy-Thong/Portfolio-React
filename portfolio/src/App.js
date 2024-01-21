@@ -17,7 +17,7 @@ import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Certs from "./components/Certificate/Certs";
-
+import ContactUs from "./components/Contact";
 function App() {
   const [load, updateLoad] = useState(true);
 
@@ -42,12 +42,14 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/certificates" element={<Certs />} />
+          <Route path="/contact" element={<ContactUs />} />
         </Routes>
         <Home />
         <About />
         <Projects />
         <Certs />
         <Resume />
+        <ContactUs />
         <Footer />
         <ScrollToTop />
       </div>

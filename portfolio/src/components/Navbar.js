@@ -12,11 +12,13 @@ import {
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
+  AiOutlineMessage,
 } from "react-icons/ai";
 import { CgFileDocument } from "react-icons/cg";
-import { GrCertificate } from "react-icons/gr";
+import { GrCertificate, GrContact } from "react-icons/gr";
 import { FaCertificate } from "react-icons/fa";
 import { TbCertificate } from "react-icons/tb";
+import { GrContactInfo } from "react-icons/gr";
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
@@ -102,6 +104,15 @@ function NavBar() {
                 onClick={() => updateExpanded(false)}
               >
                 <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/contact"
+                onClick={() => updateExpanded(false)}
+              >
+                <AiOutlineMessage style={{ marginBottom: "2px" }} /> Contact Me
               </Nav.Link>
             </Nav.Item>
 
