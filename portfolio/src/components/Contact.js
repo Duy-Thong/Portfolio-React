@@ -3,7 +3,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import { contactConfig } from "../content_option";
 import { IoSend } from "react-icons/io5";
 import emailjs from '@emailjs/browser';
-
+import { AiFillGithub, AiFillFacebook, AiFillInstagram, AiFillMail } from "react-icons/ai";
+import { TiSocialFlickrCircular } from "react-icons/ti";
 export default function ContactUs() {
     const form = useRef();
 
@@ -31,7 +32,7 @@ export default function ContactUs() {
                     <hr className="t_border my-4 ml-0 text-left" />
                 </Col>
             </Row>
-            <Row className="sec_sp" style={{ color: 'white' }}>
+            <Row className="sec_sp" style={{ color: 'white' ,borderRadius:'20px'}}>
                 <Col lg="5" className="mb-5">
                     <h3 className="color_sec py-4">Get in touch</h3>
                     <address>
@@ -50,6 +51,48 @@ export default function ContactUs() {
                         )}
                     </address>
                     <p>{contactConfig.description}</p>
+                    <ul className="home-about-social-links">
+                        <li className="social-icons">
+                            <a
+                                href="https://github.com/The-White-Bear"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="icon-colour  home-social-icons"
+                            >
+                                <AiFillGithub />
+                            </a>
+                        </li>
+                        <li className="social-icons">
+                            <a
+                                href="https://www.facebook.com/duythong27"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="icon-colour  home-social-icons"
+                            >
+                                <AiFillFacebook />
+                            </a>
+                        </li>
+                        <li className="social-icons">
+                            <a
+                                href="mailto:duythong.ptit@gmail.com"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="icon-colour  home-social-icons"
+                            >
+                                <AiFillMail />
+                            </a>
+                        </li>
+                        <li className="social-icons">
+                            <a
+                                href="https://www.instagram.com/d_d_thong/"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="icon-colour home-social-icons"
+                            >
+                                <AiFillInstagram />
+                            </a>
+                        </li>
+                    </ul>
                     
                 </Col>
                 <Col lg="7" className="d-flex align-items-center">
@@ -70,6 +113,7 @@ export default function ContactUs() {
                                     style={{ background: 'white' }}
                                     required
                                     onChange={handleChange}
+                                    
                                 />
                             </Col>
                             <Col lg="6" className="form-group">
@@ -79,7 +123,7 @@ export default function ContactUs() {
                                     name="user_email"
                                     placeholder="Email"
                                     type="email"
-                                    style={{ background: 'white' }}
+                                    style={{ background: 'white', borderRadius: '20px' }}
                                     required
                                     onChange={handleChange}
                                 />
@@ -91,7 +135,7 @@ export default function ContactUs() {
                             name="message"
                             placeholder="Message"
                             rows="5"
-                            style={{ background: 'white' }}
+                            style={{ background: 'white', borderRadius: '20px' }}
                             required
                             onChange={handleChange}
                         ></textarea>
@@ -101,7 +145,7 @@ export default function ContactUs() {
                                 <button
                                     className="btn ac_btn"
                                     type="submit"
-                                    style={{ background: 'white' }}
+                                    style={{ background: 'white' ,borderRadius:'20px'}}
                                 >
                                     Send <IoSend style={{ marginRight: '5px' }} />
                                 </button>
