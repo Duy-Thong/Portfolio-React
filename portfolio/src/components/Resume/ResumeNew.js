@@ -17,7 +17,7 @@ function ResumeNew() {
 
   return (
     <div>
-      <Container fluid className="resume-section">
+      <Container fluid className="resume-section" id="resume">
         <Particle />
         <Row style={{ justifyContent: "center", position: "relative" }}>
           <p className="resume-title" style={{ textAlign: "center", fontSize: "2.5em"}}>My <span className="purple"> Resume</span></p>
@@ -28,7 +28,6 @@ function ResumeNew() {
             <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
           </Document>
         </Row>
-
         <Row style={{ justifyContent: "center", position: "relative" }}>
           <Button
             variant="primary"

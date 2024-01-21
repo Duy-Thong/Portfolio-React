@@ -37,13 +37,6 @@ function App() {
       <Preloader load={load} />
       <div className="App" id={load ? "no-scroll" : "scroll"}>
         <Navbar />
-        <Routes>
-          <Route path="/project" element={<Projects />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/resume" element={<Resume />} />
-          <Route path="/certificates" element={<Certs />} />
-          <Route path="/contact" element={<ContactUs />} />
-        </Routes>
         <Home />
         <About />
         <Projects />

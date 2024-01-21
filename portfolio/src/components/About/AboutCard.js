@@ -11,8 +11,10 @@ function AboutCard() {
             I'm currently living in Hanoi.
             <br />
             Along with learning programming, I also participate in extracurricular activities. 
-            <br />
+  
             I am the president of a club and participate in many youth union activities. It helps me develop many soft skills to complement my programming skills.
+            <br />
+            Actually, I've only been learning to code for about a year, so I don't have much experience, but I'm trying every day to become a good programmer.
             <br />
             Apart from coding, some other activities that I love to do!
           </p>

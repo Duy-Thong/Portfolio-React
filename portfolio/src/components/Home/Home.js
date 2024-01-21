@@ -1,33 +1,39 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import gif from "../../Assets/giphy.gif";
 import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
 import { AiFillDownCircle } from "react-icons/ai";
 import { useEffect, useState } from "react";
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 
 function Home() {
-  const [showScrollIcon, setShowScrollIcon] = useState(true);
+  const [expand, updateExpanded] = useState(false);
+  const [navColour, updateNavbar] = useState(false);
 
-  const handleScroll = () => {
-    // Xác định vị trí cuộn và ẩn hiển thị của icon
-    const scrolled = window.scrollY;
-    if (scrolled > 200) {
-      setShowScrollIcon(false);
+  function scrollHandler() {
+    if (window.scrollY >= 20) {
+      updateNavbar(true);
     } else {
-      setShowScrollIcon(true);
+      updateNavbar(false);
     }
-  };
+  }
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", scrollHandler);
 
-    // Clean up event listener when component unmounts
+    // Cleanup the event listener on component unmount
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", scrollHandler);
     };
-  }, []);
+  }, []); // Empty dependency array ensures that the effect runs only once during mount
+
+  function showScrollIcon() {
+    const scrolled = window.scrollY;
+    return scrolled <= 200;
+  }
+
   return (
     <section>
       <Container fluid className="home-section" id="home">
@@ -66,25 +72,11 @@ function Home() {
           <Row className={`scroll-icon ${showScrollIcon ? "" : "hide-scroll-icon"}`}>
             <p> </p>
           </Row>
-          <Row className={`scroll-icon ${showScrollIcon ? "" : "hide-scroll-icon"}`}>
-            <p> </p>
-          </Row>
-          <Row className={`scroll-icon ${showScrollIcon ? "" : "hide-scroll-icon"}`}>
-            <p> </p>
-          </Row>
-          <Row className={`scroll-icon ${showScrollIcon ? "" : "hide-scroll-icon"}`}>
-            <p> </p>
-          </Row>
-          <Row className={`scroll-icon ${showScrollIcon ? "" : "hide-scroll-icon"}`}>
-            <p> </p>
-          </Row>
-
+          
 
         </Container>
+        
 
-        <Row className={`scroll-icon ${showScrollIcon ? "" : "hide-scroll-icon"}`}>
-          <AiFillDownCircle size={35} color="purple" />
-        </Row>
       </Container>
 
       <Home2 />

@@ -62,7 +62,7 @@ const services = [
 
 const contactConfig = {
     YOUR_EMAIL: 'duythong.ptit@gmail.com',
-    YOUR_FONE: '+84 397 403 808',
+    YOUR_FONE: '+84397403808',
     description:
         "Let's do something interesting together!",
     YOUR_SERVICE_ID: 'service_id',

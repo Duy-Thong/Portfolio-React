@@ -29,7 +29,7 @@ function Cert() {
     };
   }, []);
   return (
-    <Container fluid className="project-section">
+    <Container fluid className="project-section" id="certificates">
       <Particle />
       <Container>
         <h1 className="project-heading">

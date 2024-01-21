@@ -22,18 +22,16 @@ function Projects() {
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
-
-    // Clean up event listener when component unmounts
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
   return (
-    <Container fluid className="project-section">
+    <Container fluid className="project-section" id="projects"> 
       <Particle />
       <Container>
         <h1 className="project-heading">
-          My Recent <strong className="purple">Works </strong>
+          My Recent <strong className="purple">Projects </strong>
         </h1>
         <p style={{ color: "white" }}>
           Here are a few projects I've worked on recently.

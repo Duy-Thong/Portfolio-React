@@ -31,7 +31,7 @@ function About() {
     };
   }, []);
   return (
-    <Container fluid className="about-section" id="aboutme">
+    <Container fluid className="about-section" id="about">
       <Particle />
       <Container>
         <Row style={{ justifyContent: "center", padding: "10px" }}>
@@ -76,7 +76,7 @@ function About() {
         <h1 className="project-heading">
           Other
           <strong className="purple"> Tools </strong>
-          for Design and Photography
+          
         </h1>
         <Softskills />
 

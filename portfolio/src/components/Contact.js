@@ -5,6 +5,7 @@ import { IoSend } from "react-icons/io5";
 import emailjs from '@emailjs/browser';
 import { AiFillGithub, AiFillFacebook, AiFillInstagram, AiFillMail } from "react-icons/ai";
 import { useState } from 'react';
+import Typewriter from "typewriter-effect";
 export default function ContactUs() {
     const form = useRef();
     const [formData, setFormData] = useState({
@@ -23,7 +24,7 @@ export default function ContactUs() {
                     user_email: '',
                     message: ''
                 });
-                
+
             }, (error) => {
                 console.log(error.text);
             });
@@ -31,14 +32,18 @@ export default function ContactUs() {
 
     const handleChange = (e) => {
         e.preventDefault();
-        setFormData({
-            ...formData,
-            [e.target.name]: e.target.value
-        });
+        const { name, value } = e.target;
+        setFormData(prevState => ({
+            ...prevState,
+            [name]: value,
+        }));
     };
 
     return (
-        <Container style={{ color: 'white' }}>
+        <Container style={{ color: 'white' }} id='contactme'>
+            <Row className='mt-5'>
+                <p> </p>
+            </Row>
             <Row className='mt-5'>
                 <p> </p>
             </Row>
@@ -50,8 +55,8 @@ export default function ContactUs() {
             </Row>
             <Row className="sec_sp" style={{ color: 'white', borderRadius: '20px' }}>
                 <Col lg="5" className="mb-5">
-                    <h3 className="color_sec py-4" style={{fontSize:'35px'}}>Get in touch</h3>
-                    <address style={{fontSize:'20px'}}>
+                    <h3 className="color_sec py-4" style={{ fontSize: '35px', fontFamily: 'courier' }}>Get in touch</h3>
+                    <address style={{ fontSize: '20px', fontFamily: 'courier' }}>
                         <strong>Email:</strong>{" "}
                         <a href={`mailto:${contactConfig.YOUR_EMAIL}`} color="purple">
                             {contactConfig.YOUR_EMAIL}
@@ -59,14 +64,28 @@ export default function ContactUs() {
                         <br />
                         <br />
                         {contactConfig.hasOwnProperty("YOUR_FONE") ? (
-                            <p>
+                            <p style={{ fontFamily: 'courier', fontSize: '20px' }}>
                                 <strong>Phone:</strong> {contactConfig.YOUR_FONE}
                             </p>
                         ) : (
                             ""
                         )}
                     </address>
-                    <p>{contactConfig.description}</p>
+                    <Typewriter
+                        options={{
+                            strings: [
+                                "Let's do something great together! 🏆",
+                            ],
+                            autoStart: true,
+                            loop: true,
+                            deleteSpeed: 50,
+                            cursor: '_',
+                            wrapperClassName: 'Typewriter__string',
+                            cursorClassName: 'Typewriter__cursor_contact',
+                            stringClassName: 'Typewriter-string',
+                        }}
+                    />
+                    <br />
                     <ul className="home-about-social-links">
                         <li className="social-icons">
                             <a
@@ -126,7 +145,7 @@ export default function ContactUs() {
                                     name="user_name"
                                     placeholder="Name"
                                     type="text"
-                                    style={{ background: 'white' , borderRadius: '20px'}}
+                                    style={{ background: 'white', borderRadius: '20px' }}
                                     required
                                     onChange={handleChange}
                                     value={formData.user_name}
@@ -176,7 +195,7 @@ export default function ContactUs() {
             <Row className="mt-5">
                 <p> </p>
             </Row>
-            
+
         </Container>
     );
 }
