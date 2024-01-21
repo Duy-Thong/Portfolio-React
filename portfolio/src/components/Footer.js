@@ -16,10 +16,10 @@ function Footer() {
   return (
     <Container fluid className="footer">
       <Row>
-        <Col md="4" className="footer-copywright" style={{ color: "white",fontSize: "12px" }}>
-          <h3>Designed and Developed by Soumyajit Behera / Modified by DaoDuyThong</h3>
+        <Col md="4" className="footer-copywright" style={{ color: "white", fontSize: "12px" }}>
+          <h3></h3>
         </Col>
-        <Col md="4" className="footer-copywright" style={{ color: "white",fontSize: "12px" }}>
+        <Col md="4" className="footer-copywright" style={{ color: "white", fontSize: "12px" }}>
           <h3>Copyright © {year} DT</h3>
         </Col>
         <Col md="4" className="footer-body">
@@ -28,7 +28,7 @@ function Footer() {
               <a
                 href="https://github.com/The-White-Bear"
                 style={{ color: "white" }}
-                target="_blank" 
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 <AiFillGithub />
@@ -38,7 +38,7 @@ function Footer() {
               <a
                 href="https://www.facebook.com/duythong27"
                 style={{ color: "white" }}
-                target="_blank" 
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 <AiFillFacebook />
@@ -48,7 +48,7 @@ function Footer() {
               <a
                 href="mailto:duythong.ptit@gmail.com"
                 style={{ color: "white" }}
-                target="_blank" 
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 <SiGmail />
@@ -58,7 +58,7 @@ function Footer() {
               <a
                 href="https://www.instagram.com/d_d_thong"
                 style={{ color: "white" }}
-                target="_blank" 
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 <AiFillInstagram />
