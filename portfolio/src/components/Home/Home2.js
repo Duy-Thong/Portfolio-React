@@ -9,10 +9,11 @@ import {
   AiFillMail,
 
 } from "react-icons/ai";
+
 import { TiSocialFlickrCircular } from "react-icons/ti";
 
-
 function Home2() {
+  
   return (
     <Container fluid className="home-about-section" id="about">
       <Container>
@@ -106,6 +107,7 @@ function Home2() {
           </Col>
         </Row>
       </Container>
+      
     </Container>
   );
 }

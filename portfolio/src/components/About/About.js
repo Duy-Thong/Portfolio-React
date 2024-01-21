@@ -7,9 +7,31 @@ import Aboutcard from "./AboutCard";
 import laptopImg from "../../Assets/about.png";
 import Toolstack from "./Toolstack";
 import Softskills from "./Softskills";
+import { AiFillDownCircle } from "react-icons/ai";
+import { useEffect, useState } from "react";
 function About() {
+  const [showScrollIcon, setShowScrollIcon] = useState(true);
+
+  const handleScroll = () => {
+    // Xác định vị trí cuộn và ẩn hiển thị của icon
+    const scrolled = window.scrollY;
+    if (scrolled > 200) {
+      setShowScrollIcon(false);
+    } else {
+      setShowScrollIcon(true);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up event listener when component unmounts
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
-    <Container fluid className="about-section">
+    <Container fluid className="about-section" id="aboutme">
       <Particle />
       <Container>
         <Row style={{ justifyContent: "center", padding: "10px" }}>
@@ -33,7 +55,14 @@ function About() {
           >
             <img src={laptopImg} alt="about" className="img-fluid" />
           </Col>
+          <Row className={`scroll-icon ${showScrollIcon ? "" : "hide-scroll-icon"}`}>
+            <AiFillDownCircle size={35} color="purple" />
+          </Row>
+          <Row className="mt-5">
+            <p> </p>
+          </Row>
         </Row>
+
         <h1 className="project-heading">
           Professional <strong className="purple">Skillset </strong>
         </h1>
@@ -45,13 +74,16 @@ function About() {
         </h1>
         <Toolstack />
         <h1 className="project-heading">
-          Other 
-          <strong className="purple"> Tools </strong> 
+          Other
+          <strong className="purple"> Tools </strong>
           for Design and Photography
         </h1>
         <Softskills />
-          
+
         <Github />
+        <Row className={`scroll-icon ${showScrollIcon ? "" : "hide-scroll-icon"}`}>
+          <AiFillDownCircle size={35} color="purple" />
+        </Row>
       </Container>
     </Container>
   );

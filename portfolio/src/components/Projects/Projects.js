@@ -5,9 +5,29 @@ import Particle from "../Particle";
 import attendace from "../../Assets/Projects/1.png";
 import automail from "../../Assets/Projects/2.png";
 import shopping from "../../Assets/Projects/3.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
-
+import { AiFillDownCircle } from "react-icons/ai";
+import { useEffect, useState } from "react";
 function Projects() {
+  const [showScrollIcon, setShowScrollIcon] = useState(true);
+
+  const handleScroll = () => {
+    // Xác định vị trí cuộn và ẩn hiển thị của icon
+    const scrolled = window.scrollY;
+    if (scrolled > 200) {
+      setShowScrollIcon(false);
+    } else {
+      setShowScrollIcon(true);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up event listener when component unmounts
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
     <Container fluid className="project-section">
       <Particle />
@@ -48,6 +68,9 @@ function Projects() {
               ghLink="https://github.com/Shodydosh/BE_JAVA_BTL"
             />
           </Col>
+        </Row>
+        <Row className={`scroll-icon ${showScrollIcon ? "" : "hide-scroll-icon"}`}>
+          <AiFillDownCircle size={35} color="purple" />
         </Row>
       </Container>
     </Container>

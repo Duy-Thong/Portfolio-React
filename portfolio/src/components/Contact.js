@@ -4,16 +4,26 @@ import { contactConfig } from "../content_option";
 import { IoSend } from "react-icons/io5";
 import emailjs from '@emailjs/browser';
 import { AiFillGithub, AiFillFacebook, AiFillInstagram, AiFillMail } from "react-icons/ai";
-import { TiSocialFlickrCircular } from "react-icons/ti";
+import { useState } from 'react';
 export default function ContactUs() {
     const form = useRef();
-
+    const [formData, setFormData] = useState({
+        user_name: '',
+        user_email: '',
+        message: ''
+    });
     const sendEmail = (e) => {
         e.preventDefault();
 
         emailjs.sendForm('service_l2n672y', 'template_skkfqgg', form.current, 'AL_QeDqTX3JiynBHD')
             .then((result) => {
                 console.log(result.text);
+                setFormData({
+                    user_name: '',
+                    user_email: '',
+                    message: ''
+                });
+                
             }, (error) => {
                 console.log(error.text);
             });
@@ -21,21 +31,27 @@ export default function ContactUs() {
 
     const handleChange = (e) => {
         e.preventDefault();
-        console.log(e.target.value);
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
     };
 
     return (
         <Container style={{ color: 'white' }}>
+            <Row className='mt-5'>
+                <p> </p>
+            </Row>
             <Row className="mb-5 mt-3">
                 <Col lg="8">
-                    <h1 className="display-4 mb-4" style={{ paddingTop: '80px', color: 'white' }}>Contact <strong className="purple">Me</strong></h1>
+                    <h1 className="display-4 mb-4" style={{ paddingTop: '80px', color: 'white' }}>Contact <strong className="purple">Me</strong> <span class="wave">👋</span></h1>
                     <hr className="t_border my-4 ml-0 text-left" />
                 </Col>
             </Row>
-            <Row className="sec_sp" style={{ color: 'white' ,borderRadius:'20px'}}>
+            <Row className="sec_sp" style={{ color: 'white', borderRadius: '20px' }}>
                 <Col lg="5" className="mb-5">
-                    <h3 className="color_sec py-4">Get in touch</h3>
-                    <address>
+                    <h3 className="color_sec py-4" style={{fontSize:'35px'}}>Get in touch</h3>
+                    <address style={{fontSize:'20px'}}>
                         <strong>Email:</strong>{" "}
                         <a href={`mailto:${contactConfig.YOUR_EMAIL}`} color="purple">
                             {contactConfig.YOUR_EMAIL}
@@ -93,7 +109,7 @@ export default function ContactUs() {
                             </a>
                         </li>
                     </ul>
-                    
+
                 </Col>
                 <Col lg="7" className="d-flex align-items-center">
                     <form
@@ -110,10 +126,10 @@ export default function ContactUs() {
                                     name="user_name"
                                     placeholder="Name"
                                     type="text"
-                                    style={{ background: 'white' }}
+                                    style={{ background: 'white' , borderRadius: '20px'}}
                                     required
                                     onChange={handleChange}
-                                    
+                                    value={formData.user_name}
                                 />
                             </Col>
                             <Col lg="6" className="form-group">
@@ -126,6 +142,7 @@ export default function ContactUs() {
                                     style={{ background: 'white', borderRadius: '20px' }}
                                     required
                                     onChange={handleChange}
+                                    value={formData.user_email}
                                 />
                             </Col>
                         </Row>
@@ -138,6 +155,7 @@ export default function ContactUs() {
                             style={{ background: 'white', borderRadius: '20px' }}
                             required
                             onChange={handleChange}
+                            value={formData.message}
                         ></textarea>
                         <br />
                         <Row>
@@ -145,15 +163,20 @@ export default function ContactUs() {
                                 <button
                                     className="btn ac_btn"
                                     type="submit"
-                                    style={{ background: 'white' ,borderRadius:'20px'}}
+                                    style={{ background: 'white', borderRadius: '20px' }}
                                 >
                                     Send <IoSend style={{ marginRight: '5px' }} />
                                 </button>
                             </Col>
                         </Row>
                     </form>
+
                 </Col>
             </Row>
+            <Row className="mt-5">
+                <p> </p>
+            </Row>
+            
         </Container>
     );
 }

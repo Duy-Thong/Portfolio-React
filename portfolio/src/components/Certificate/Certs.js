@@ -7,7 +7,27 @@ import samsung from "../../Assets/Certs/Samsung1.jpg";
 import toeic from "../../Assets/Certs/toeic1.jpg";
 import sv5t from "../../Assets/Certs/sv5t.jpg";
 import juntion from "../../Assets/Certs/juntion.png";
+import { AiFillDownCircle } from "react-icons/ai";
+import { useEffect, useState } from "react";
 function Cert() {
+  const [showScrollIcon, setShowScrollIcon] = useState(true);
+  const handleScroll = () => {
+    const scrolled = window.scrollY;
+    if (scrolled > 200) {
+      setShowScrollIcon(false);
+    } else {
+      setShowScrollIcon(true);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up event listener when component unmounts
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
     <Container fluid className="project-section">
       <Particle />
@@ -64,7 +84,9 @@ function Cert() {
             />
           </Col>
 
-
+          <Row className={`scroll-icon ${showScrollIcon ? "" : "hide-scroll-icon"}`}>
+            <AiFillDownCircle size={35} color="purple" />
+          </Row>
         </Row>
       </Container>
     </Container>
