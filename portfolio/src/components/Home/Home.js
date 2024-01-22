@@ -38,7 +38,7 @@ function Home() {
     <section id="home">
       <Container fluid className="home-section"  >
         <Particle />
-        <Container className="home-content" style={{ paddingTop: "-100px" ,marginTop: "-50px"}} >
+        <Container className="home-content" style={{ paddingTop: "-100px", marginTop: "-50px" }} >
           <Row>
             <Col md={7} className="home-header">
               <h1 style={{ paddingBottom: 15 }} className="heading">
@@ -64,7 +64,7 @@ function Home() {
                 style={{ maxHeight: "1700px" }}
               />
             </Col>
-          </Row>          
+          </Row>
         </Container>
         <Row className="scroll-icon" >
           <ScrollLink
@@ -78,9 +78,8 @@ function Home() {
             onClick={() => updateExpanded(false)}
           >
             <AiFillDownCircle
-              style={{ color: "purple",marginTop: "40px" }}
+              style={{ color: "purple", marginTop: "40px" }}
               size={35}
-              className="scroll-icon-icon" /* Assign a unique class for styling */
             />
           </ScrollLink>
 

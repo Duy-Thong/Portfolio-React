@@ -767,10 +767,8 @@ button:focus {
   }
 }
 
-.scroll-icon a {
-  animation: bounce 2s infinite;
-  z-index: 100;
-  
+.scroll-icon {
+  animation: bounce 2s infinite;  
 }
 .hide-scroll-icon {
   display: none;
