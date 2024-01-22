@@ -6,7 +6,6 @@ import Home2 from "./Home2";
 import Type from "./Type";
 import { AiFillDownCircle } from "react-icons/ai";
 import { useEffect, useState } from "react";
-import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 
 function Home() {
   const [expand, updateExpanded] = useState(false);
