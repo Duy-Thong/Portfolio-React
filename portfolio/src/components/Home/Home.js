@@ -65,10 +65,14 @@ function Home() {
               />
             </Col>
           </Row>
-        </Container>
+          
+        </Container>\
+        {/* <Row style={{ alignSelf: "center", position: "relative",color: "white",paddingTop: "50px" ,fontFamily:"courier"}}>
+          <p >Click to the screen to make a star!</p>
+        </Row> */}
         <Row className="scroll-icon" >
           <ScrollLink
-            style={{ color: "white", paddingTop: "100px" }}
+            style={{ color: "white", paddingTop: "80px" }}
             activeClass="active"
             to="contactme"
             spy={true}

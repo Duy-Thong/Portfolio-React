@@ -84,7 +84,7 @@ export default function ContactUs() {
                     <Typewriter
                         options={{
                             strings: [
-                                "Let's do something great together! 🏆",
+                                "Let's do something funny together!🏆",
                             ],
                             autoStart: true,
                             loop: true,

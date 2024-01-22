@@ -3,9 +3,11 @@ import { Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Particle from "../Particle";
 import pdf from "../../Assets/../Assets/CV.pdf";
-import { AiOutlineDownload } from "react-icons/ai";
+import cvpng from "../../Assets/../Assets/CV.png";
+import { AiOutlineDownload, AiOutlineFundView } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
+import { SiCodereview } from "react-icons/si";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 function ResumeNew() {
@@ -15,28 +17,26 @@ function ResumeNew() {
     setWidth(window.innerWidth);
   }, []);
 
+
   return (
     <div>
       <Container fluid className="resume-section" id="resume">
         <Particle />
         <Row style={{ justifyContent: "center", position: "relative" }}>
-          <p className="resume-title" style={{ textAlign: "center", fontSize: "2.5em"}}>My <span className="purple"> Resume</span></p>
-        </Row>
-
-        <Row className="resume">
-          <Document file={pdf} className="d-flex justify-content-center">
-            <Page pageNumber={1} scale={width > 786 ? 1.7 : 1.4} />
-          </Document>
+          <p className="resume-title" style={{ textAlign: "center", fontSize: "2.5em" }}>My <span className="purple"> Resume</span></p>
+          <br />
+          <p> Resume Preview </p>
+          <img src={cvpng} alt="resume" style={{ maxWidth: "750px" }} />
         </Row>
         <Row style={{ justifyContent: "center", position: "relative" }}>
           <Button
             variant="primary"
             href={pdf}
             target="_blank"
-            style={{ maxWidth: "250px" }}
+            style={{ maxWidth: "250px", paddingTop: "10px", marginTop: "20px" }}
           >
-            <AiOutlineDownload />
-            &nbsp;Download CV
+            <SiCodereview />
+            &nbsp;View full resume
           </Button>
         </Row>
       </Container>
