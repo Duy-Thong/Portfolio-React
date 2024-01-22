@@ -72,10 +72,19 @@ function Home() {
           <Row className={`scroll-icon ${showScrollIcon ? "" : "hide-scroll-icon"}`}>
             <p> </p>
           </Row>
+          <Row className={`scroll-icon ${showScrollIcon ? "" : "hide-scroll-icon"}`}>
+            <p> </p>
+          </Row>
+          <Row className={`scroll-icon ${showScrollIcon ? "" : "hide-scroll-icon"}`}>
+            <p> </p>
+          </Row>
           
 
         </Container>
-        
+        <Row className={`scroll-icon ${showScrollIcon ? "" : "hide-scroll-icon"}`}>
+          <AiFillDownCircle size={35} color="purple" />
+        </Row>
+
 
       </Container>
 

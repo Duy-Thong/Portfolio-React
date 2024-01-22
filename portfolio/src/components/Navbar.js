@@ -59,7 +59,7 @@ function NavBar() {
                 to="home"
                 spy={true}
                 smooth={true}
-                offset={80}
+                offset={-40}
                 duration={500}
                 onClick={() => updateExpanded(false)}
               >

@@ -6,8 +6,12 @@ import emailjs from '@emailjs/browser';
 import { AiFillGithub, AiFillFacebook, AiFillInstagram, AiFillMail } from "react-icons/ai";
 import { useState } from 'react';
 import Typewriter from "typewriter-effect";
+import { Alert } from 'react-bootstrap';
 export default function ContactUs() {
     const form = useRef();
+    const [alertMessage, setAlertMessage] = useState('');
+    const [alertVariant, setAlertVariant] = useState('success'); // or 'danger' for error
+
     const [formData, setFormData] = useState({
         user_name: '',
         user_email: '',
@@ -18,15 +22,19 @@ export default function ContactUs() {
 
         emailjs.sendForm('service_l2n672y', 'template_skkfqgg', form.current, 'AL_QeDqTX3JiynBHD')
             .then((result) => {
+
                 console.log(result.text);
                 setFormData({
                     user_name: '',
                     user_email: '',
                     message: ''
                 });
+                setAlertMessage('Email sent successfully!');
+                setAlertVariant('success');
 
             }, (error) => {
-                console.log(error.text);
+                console.log(error.text); 
+                setAlertMessage('Error sending email!');
             });
     };
 
@@ -38,6 +46,9 @@ export default function ContactUs() {
             [name]: value,
         }));
     };
+    const handleAlertClose = () => {
+        setAlertMessage('');
+    };
 
     return (
         <Container style={{ color: 'white' }} id='contactme'>
@@ -47,6 +58,7 @@ export default function ContactUs() {
             <Row className='mt-5'>
                 <p> </p>
             </Row>
+            
             <Row className="mb-5 mt-3">
                 <Col lg="8">
                     <h1 className="display-4 mb-4" style={{ paddingTop: '80px', color: 'white' }}>Contact <strong className="purple">Me</strong> <span class="wave">👋</span></h1>
@@ -145,7 +157,7 @@ export default function ContactUs() {
                                     name="user_name"
                                     placeholder="Name"
                                     type="text"
-                                    style={{ background: 'white', borderRadius: '20px' }}
+                                    style={{ background: 'white', borderRadius: '20px',color:'black' }}
                                     required
                                     onChange={handleChange}
                                     value={formData.user_name}
@@ -158,7 +170,7 @@ export default function ContactUs() {
                                     name="user_email"
                                     placeholder="Email"
                                     type="email"
-                                    style={{ background: 'white', borderRadius: '20px' }}
+                                    style={{ background: 'white', borderRadius: '20px' ,color:'black'}}
                                     required
                                     onChange={handleChange}
                                     value={formData.user_email}
@@ -171,7 +183,7 @@ export default function ContactUs() {
                             name="message"
                             placeholder="Message"
                             rows="5"
-                            style={{ background: 'white', borderRadius: '20px' }}
+                            style={{ background: 'white', borderRadius: '20px' ,color:'black'}}
                             required
                             onChange={handleChange}
                             value={formData.message}
@@ -195,7 +207,19 @@ export default function ContactUs() {
             <Row className="mt-5">
                 <p> </p>
             </Row>
-
+            {alertMessage && (
+                <Row>
+                    <Col lg='12'>
+                        <Alert
+                            variant={alertVariant}
+                            onClose={handleAlertClose}
+                            dismissible
+                        >
+                            {alertMessage}
+                        </Alert>
+                    </Col>
+                </Row>
+            )}
         </Container>
     );
 }
