@@ -3,18 +3,15 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import logo from "../Assets/duy.png";
-import { Link } from "react-router-dom";
 import {
   AiOutlineHome,
-  AiOutlineFundProjectionScreen,
   AiOutlineUser,
   AiOutlineMessage,
   AiOutlineProject,
-  AiFillMessage,
 } from "react-icons/ai";
 import { CgFileDocument } from "react-icons/cg";
 import { TbCertificate } from "react-icons/tb";
-import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
@@ -74,7 +71,7 @@ function NavBar() {
                 to="about"
                 spy={true}
                 smooth={true}
-                offset={80}
+                offset={110}
                 duration={500}
                 onClick={() => updateExpanded(false)}
               >

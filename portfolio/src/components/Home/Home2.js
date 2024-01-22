@@ -15,7 +15,7 @@ import { TiSocialFlickrCircular } from "react-icons/ti";
 function Home2() {
   
   return (
-    <Container fluid className="home-about-section">
+    <Container fluid className="home-about-section" id="home">
       <Container>
         <Row>
           <Col md={8} className="home-about-description">
@@ -60,7 +60,7 @@ function Home2() {
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
                 >
-                  <AiFillGithub />
+                  <AiFillGithub size={25}/>
                 </a>
               </li>
               <li className="social-icons">
@@ -70,7 +70,7 @@ function Home2() {
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
                 >
-                  <AiFillFacebook />
+                  <AiFillFacebook size={25} />
                 </a>
               </li>
               <li className="social-icons">
@@ -80,7 +80,7 @@ function Home2() {
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
                 >
-                  <AiFillMail/>
+                  <AiFillMail size={25} />
                 </a>
               </li>
               <li className="social-icons">
@@ -90,7 +90,7 @@ function Home2() {
                   rel="noreferrer"
                   className="icon-colour home-social-icons"
                 >
-                  <AiFillInstagram />
+                  <AiFillInstagram size={25} />
                 </a>
               </li>
               <li className="social-icons">
@@ -100,7 +100,7 @@ function Home2() {
                   rel="noreferrer"
                   className="icon-colour home-social-icons"
                 >
-                  <TiSocialFlickrCircular />
+                  <TiSocialFlickrCircular size={25} />
                 </a>
               </li>
             </ul>

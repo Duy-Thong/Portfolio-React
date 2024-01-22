@@ -6,7 +6,8 @@ import Home2 from "./Home2";
 import Type from "./Type";
 import { AiFillDownCircle } from "react-icons/ai";
 import { useEffect, useState } from "react";
-
+import { Link as ScrollLink } from "react-scroll";
+import { AiOutlineMessage } from "react-icons/ai";
 function Home() {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
@@ -34,10 +35,10 @@ function Home() {
   }
 
   return (
-    <section>
-      <Container fluid className="home-section" id="home">
+    <section id="home">
+      <Container fluid className="home-section"  >
         <Particle />
-        <Container className="home-content">
+        <Container className="home-content" style={{ paddingTop: "-100px" ,marginTop: "-50px"}} >
           <Row>
             <Col md={7} className="home-header">
               <h1 style={{ paddingBottom: 15 }} className="heading">
@@ -46,7 +47,6 @@ function Home() {
                   👋🏻
                 </span>
               </h1>
-
               <h1 className="heading-name">
                 I'M
                 <strong className="main-name"> DAO DUY THONG </strong>
@@ -64,27 +64,27 @@ function Home() {
                 style={{ maxHeight: "1700px" }}
               />
             </Col>
-          </Row>
-          <Row className={`scroll-icon ${showScrollIcon ? "" : "hide-scroll-icon"}`}>
-            <p> </p>
-          </Row>
-          <Row className={`scroll-icon ${showScrollIcon ? "" : "hide-scroll-icon"}`}>
-            <p> </p>
-          </Row>
-          <Row className={`scroll-icon ${showScrollIcon ? "" : "hide-scroll-icon"}`}>
-            <p> </p>
-          </Row>
-          <Row className={`scroll-icon ${showScrollIcon ? "" : "hide-scroll-icon"}`}>
-            <p> </p>
-          </Row>
-          
-
+          </Row>          
         </Container>
-        <Row className={`scroll-icon ${showScrollIcon ? "" : "hide-scroll-icon"}`}>
-          <AiFillDownCircle size={35} color="purple" />
+        <Row className="scroll-icon" >
+          <ScrollLink
+            style={{ color: "white", paddingTop: "100px" }}
+            activeClass="active"
+            to="contactme"
+            spy={true}
+            smooth={true}
+            offset={80}
+            duration={500}
+            onClick={() => updateExpanded(false)}
+          >
+            <AiFillDownCircle
+              style={{ color: "purple",marginTop: "40px" }}
+              size={35}
+              className="scroll-icon-icon" /* Assign a unique class for styling */
+            />
+          </ScrollLink>
+
         </Row>
-
-
       </Container>
 
       <Home2 />

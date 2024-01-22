@@ -346,7 +346,9 @@ button:focus {
   text-align: center !important;
   padding-top: 25px;
   color: white !important;
+  
 }
+
 
 .home-about-social-links {
   justify-content: center !important;
@@ -765,10 +767,11 @@ button:focus {
   }
 }
 
-.scroll-icon {
+.scroll-icon a {
   animation: bounce 2s infinite;
+  z-index: 100;
+  
 }
-
 .hide-scroll-icon {
   display: none;
 }

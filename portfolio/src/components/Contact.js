@@ -1,15 +1,19 @@
 import React, { useRef } from 'react';
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col ,Alert} from "react-bootstrap";
 import { contactConfig } from "../content_option";
 import { IoSend } from "react-icons/io5";
 import emailjs from '@emailjs/browser';
 import { AiFillGithub, AiFillFacebook, AiFillInstagram, AiFillMail } from "react-icons/ai";
 import { useState } from 'react';
 import Typewriter from "typewriter-effect";
-export default function ContactUs() {
-    const form = useRef();
- 
 
+export default function ContactUs() {
+    const [alertMessage, setAlertMessage] = useState('');
+    const [alertVariant, setAlertVariant] = useState('success'); // or 'danger' for error
+    const handleAlertClose = () => {
+        setAlertMessage('');
+    };
+    const form = useRef();
     const [formData, setFormData] = useState({
         user_name: '',
         user_email: '',
@@ -27,6 +31,8 @@ export default function ContactUs() {
                     user_email: '',
                     message: ''
                 });
+                setAlertMessage('Email sent successfully!');
+                setAlertVariant('success');
             }, (error) => {
                 console.log(error.text); 
             });
@@ -199,7 +205,19 @@ export default function ContactUs() {
             <Row className="mt-5">
                 <p> </p>
             </Row>
-            
+            {alertMessage && (
+                <Row>
+                    <Col lg='12'>
+                        <Alert
+                            variant={alertVariant}
+                            onClose={handleAlertClose}
+                            dismissible
+                        >
+                            {alertMessage}
+                        </Alert>
+                    </Col>
+                </Row>
+            )}
         </Container>
     );
 }
