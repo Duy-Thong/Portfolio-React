@@ -6,11 +6,9 @@ import emailjs from '@emailjs/browser';
 import { AiFillGithub, AiFillFacebook, AiFillInstagram, AiFillMail } from "react-icons/ai";
 import { useState } from 'react';
 import Typewriter from "typewriter-effect";
-import { Alert } from 'react-bootstrap';
 export default function ContactUs() {
     const form = useRef();
-    const [alertMessage, setAlertMessage] = useState('');
-    const [alertVariant, setAlertVariant] = useState('success'); // or 'danger' for error
+ 
 
     const [formData, setFormData] = useState({
         user_name: '',
@@ -29,12 +27,8 @@ export default function ContactUs() {
                     user_email: '',
                     message: ''
                 });
-                setAlertMessage('Email sent successfully!');
-                setAlertVariant('success');
-
             }, (error) => {
                 console.log(error.text); 
-                setAlertMessage('Error sending email!');
             });
     };
 
@@ -46,9 +40,7 @@ export default function ContactUs() {
             [name]: value,
         }));
     };
-    const handleAlertClose = () => {
-        setAlertMessage('');
-    };
+    
 
     return (
         <Container style={{ color: 'white' }} id='contactme'>
@@ -207,19 +199,7 @@ export default function ContactUs() {
             <Row className="mt-5">
                 <p> </p>
             </Row>
-            {alertMessage && (
-                <Row>
-                    <Col lg='12'>
-                        <Alert
-                            variant={alertVariant}
-                            onClose={handleAlertClose}
-                            dismissible
-                        >
-                            {alertMessage}
-                        </Alert>
-                    </Col>
-                </Row>
-            )}
+            
         </Container>
     );
 }
