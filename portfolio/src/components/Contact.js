@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { Container, Row, Col ,Alert} from "react-bootstrap";
+import { Container, Row, Col, Alert } from "react-bootstrap";
 import { contactConfig } from "../content_option";
 import { IoSend } from "react-icons/io5";
 import emailjs from '@emailjs/browser';
@@ -34,7 +34,7 @@ export default function ContactUs() {
                 setAlertMessage('Email sent successfully!');
                 setAlertVariant('success');
             }, (error) => {
-                console.log(error.text); 
+                console.log(error.text);
             });
     };
 
@@ -46,7 +46,7 @@ export default function ContactUs() {
             [name]: value,
         }));
     };
-    
+
 
     return (
         <Container style={{ color: 'white' }} id='contactme'>
@@ -56,7 +56,7 @@ export default function ContactUs() {
             <Row className='mt-5'>
                 <p> </p>
             </Row>
-            
+
             <Row className="mb-5 mt-3">
                 <Col lg="8">
                     <h1 className="display-4 mb-4" style={{ paddingTop: '80px', color: 'white' }}>Contact <strong className="purple">Me</strong> <span class="wave">👋</span></h1>
@@ -84,7 +84,7 @@ export default function ContactUs() {
                     <Typewriter
                         options={{
                             strings: [
-                                "Let's do something funny together!🏆",
+                                "Let's do something great together!🏆",
                             ],
                             autoStart: true,
                             loop: true,
@@ -155,7 +155,7 @@ export default function ContactUs() {
                                     name="user_name"
                                     placeholder="Name"
                                     type="text"
-                                    style={{ background: 'white', borderRadius: '20px',color:'black' }}
+                                    style={{ background: 'white', borderRadius: '20px', color: 'black' }}
                                     required
                                     onChange={handleChange}
                                     value={formData.user_name}
@@ -168,7 +168,7 @@ export default function ContactUs() {
                                     name="user_email"
                                     placeholder="Email"
                                     type="email"
-                                    style={{ background: 'white', borderRadius: '20px' ,color:'black'}}
+                                    style={{ background: 'white', borderRadius: '20px', color: 'black' }}
                                     required
                                     onChange={handleChange}
                                     value={formData.user_email}
@@ -181,7 +181,7 @@ export default function ContactUs() {
                             name="message"
                             placeholder="Message"
                             rows="5"
-                            style={{ background: 'white', borderRadius: '20px' ,color:'black'}}
+                            style={{ background: 'white', borderRadius: '20px', color: 'black' }}
                             required
                             onChange={handleChange}
                             value={formData.message}

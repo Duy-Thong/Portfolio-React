@@ -456,7 +456,10 @@ button:focus {
   position: relative !important;
   padding-top: 150px !important;
   padding-bottom: 30px !important;
-  background-image: var(--section-background-color) !important;
+  /* background-image: var(--image-gradient), url(./Assets/home-bg.jpg);
+  background-position: top center;
+  background-size: cover; */
+  /* background-repeat: no-repeat; */
 }
 
 .project-card {
@@ -554,7 +557,9 @@ button:focus {
   position: relative !important;
   padding-top: 150px !important;
   padding-bottom: 30px !important;
-  background-image: var(--section-background-color) !important;
+   /* background-image: var(--image-gradient), url(./Assets/home-bg.jpg);
+  background-position: top center;
+  background-size: cover; */
   color: white !important;
 }
 
@@ -618,7 +623,7 @@ button:focus {
   position: relative !important;
   padding-top: 110px !important;
   padding-bottom: 30px !important;
-  background-image: var(--section-background-color) !important;
+  /* background-image: var(--image-gradient), url(./Assets/home-bg.jpg); */
   color: white !important;
 }
 
