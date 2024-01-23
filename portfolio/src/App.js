@@ -18,6 +18,7 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Certs from "./components/Certificate/Certs";
 import ContactUs from "./components/Contact";
+import Practicle from "../src/components/Particle";
 function App() {
   const [load, updateLoad] = useState(true);
 
@@ -36,6 +37,7 @@ function App() {
       </Helmet>
       <Preloader load={load} />
       <div className="App" id={load ? "no-scroll" : "scroll"}>
+        <Practicle />
         <Navbar />
         <Home />
         <About />

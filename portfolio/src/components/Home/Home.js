@@ -28,12 +28,6 @@ function Home() {
       window.removeEventListener("scroll", scrollHandler);
     };
   }, []); // Empty dependency array ensures that the effect runs only once during mount
-
-  function showScrollIcon() {
-    const scrolled = window.scrollY;
-    return scrolled <= 200;
-  }
-
   return (
     <section id="home">
       <Container fluid className="home-section"  >

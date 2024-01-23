@@ -32,7 +32,11 @@ function Particle() {
               opacity_min: 0.05,
             },
           },
+          color: { // Thêm phần color để định nghĩa màu sắc
+            value: "#ffffff" // Mã màu trắng
+          }
         },
+
         interactivity: {
           events: {
             onclick: {

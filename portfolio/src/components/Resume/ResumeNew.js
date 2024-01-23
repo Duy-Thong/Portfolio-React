@@ -30,11 +30,11 @@ function ResumeNew() {
         </Row>
 
         <Row style={{ justifyContent: "center", position: "relative" }}>
-          <Col md={6} style={{ textAlign: "center",paddingLeft:"50px" }}>
+          <Col md={7} style={{ textAlign: "center",paddingLeft:"50px" }}>
             <p> Resume Preview </p>
-            <img src={cvpng} alt="resume" style={{ maxWidth: "100%" }} />
+            <img src={cvpng} alt="resume" style={{ maxWidth: "100%" ,marginLeft:"50px" }} />
           </Col>
-          <Col md={6} style={{ alignSelf: "center", paddingRight: "50px", textAlign: "center" }}>
+          <Col md={5} style={{ alignSelf: "center", paddingRight: "50px", textAlign: "center" }}>
             <Row className="align-items-center justify-content-center">
               <img src={CVfind} style={{ maxWidth: "55%" }} alt="resume details" />
             </Row>
