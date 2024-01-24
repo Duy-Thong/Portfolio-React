@@ -49,7 +49,7 @@ function ResumeNew() {
             </Row>
           </Col>
         </Row>
-        <DownButton scrollToElement="contactme" offsetElement="200"/>
+        <DownButton scrollToElement="contactme" offsetElement={120}/>
       </Container>
     </div>
   );

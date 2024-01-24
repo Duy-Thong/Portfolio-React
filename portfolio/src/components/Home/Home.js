@@ -31,15 +31,15 @@ function Home() {
     };
   }, []); // Empty dependency array ensures that the effect runs only once during mount
   return (
-    
-      <Container fluid className="home-section" id="home"  >
+
+    <Container fluid className="home-section" id="home"  >
       <Container fluid>
-        <Particle />
         <Container className="home-content" style={{
-          paddingTop: "-100px", marginTop: "-50px", marginBottom: "0px"  }} >
+          paddingTop: "-100px", marginTop: "-50px", marginBottom: "0px"
+        }} >
           <Row>
             <Col md={6} className="home-header">
-              <h1 style={{ paddingBottom: 15,fontSize: "2.5em" }} className="heading">
+              <h1 style={{ paddingBottom: 15, fontSize: "2.5em" }} className="heading">
                 Hi There!{" "}
                 <span className="wave" role="img" aria-labelledby="wave">
                   👋🏻
@@ -49,21 +49,23 @@ function Home() {
                 I'M
                 <strong className="main-name"> DAO DUY THONG </strong>
               </h1>
-              <div style={{ padding: 50, textAlign: "left"}}>
+              <div style={{ padding: 50, textAlign: "left" }}>
                 <Type />
               </div>
             </Col>
 
             <Col md={6} style={{ paddingBottom: 20 }}>
-              <img src={gif} className="img-fluid" alt="home pic" style={{ width: "90%",height:'90%' }} />
+              <img src={gif} className="img-fluid" alt="home pic" style={{ width: "90%", height: '90%' }} />
             </Col>
           </Row>
-          
+
         </Container>
-        <DownButton scrollToElement="home2" offsetElement="0"/>
+        <DownButton scrollToElement="home2" offsetElement="0" />
       </Container>
 
       <Home2 />
+      <Particle />
+
     </Container>
   );
 }

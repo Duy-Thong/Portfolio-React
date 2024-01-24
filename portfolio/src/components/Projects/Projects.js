@@ -67,7 +67,7 @@ function Projects() {
             />
           </Col>
         </Row>
-        <DownButton scrollToElement="certificates" offsetElement={0} style={{paddingTop:"0px", marginTop:"0px"}} />
+        <DownButton scrollToElement="certificates" offsetElement={-30} style={{paddingTop:"0px", marginTop:"0px"}} />
       </Container>
     </Container>
   );

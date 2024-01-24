@@ -86,7 +86,7 @@ function NavBar() {
                 to="projects"
                 spy={true}
                 smooth={true}
-                offset={0}
+                offset={-30}
                 duration={500}
                 onClick={() => updateExpanded(false)}
               >
@@ -101,7 +101,7 @@ function NavBar() {
                 to="certificates"
                 spy={true}
                 smooth={true}
-                offset={0}
+                offset={-30}
                 duration={500}
                 onClick={() => updateExpanded(false)}
               >
@@ -117,7 +117,7 @@ function NavBar() {
                 to="resume"
                 spy={true}
                 smooth={true}
-                offset={30}
+                offset={-40}
                 duration={500}
                 onClick={() => updateExpanded(false)}
               >
@@ -131,7 +131,7 @@ function NavBar() {
                 to="contactme"
                 spy={true}
                 smooth={true}
-                offset={80}
+                offset={120}
                 duration={500}
                 onClick={() => updateExpanded(false)}
               >

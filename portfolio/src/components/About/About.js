@@ -76,7 +76,7 @@ function About() {
         <Softskills />
 
         <Github />
-        <DownButton scrollToElement="projects" offsetElement={0} style={{paddingTop: "-10px"}} />
+        <DownButton scrollToElement="projects" offsetElement={-30}  />
       </Container>
       
     </Container>
