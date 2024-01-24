@@ -49,7 +49,7 @@ export default function ContactUs() {
 
 
     return (
-        <Container style={{ color: 'white' }} id='contactme'>
+        <Container style={{ paddingTop:'0px', marginTop:'0px' }} id='contactme' >
             <Row className='mt-5'>
                 <p> </p>
             </Row>
@@ -84,7 +84,7 @@ export default function ContactUs() {
                     <Typewriter
                         options={{
                             strings: [
-                                "Let's do something great together!🏆",
+                                "Let's do something great together",
                             ],
                             autoStart: true,
                             loop: true,

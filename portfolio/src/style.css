@@ -252,14 +252,16 @@ button:focus {
 
 .home-header {
   padding-top: 80px !important;
+  font-size: 1em !important;
 }
 
 .home-section {
   position: relative;
-  z-index: -1;
-  background-image: var(--image-gradient), url(./Assets/home-bg.jpg);
+  /* z-index: -1; */
+  background-image: var(--image-gradient), url(./Assets/homebg.jpg);
   background-position: top center;
   background-repeat: no-repeat;
+  background-size: cover !important;
   padding-bottom: 30px !important;
   padding-top: 30px !important;
 }
@@ -285,7 +287,7 @@ button:focus {
 }
 
 .Typewriter__wrapper {
-  font-size: 2.2em !important;
+  font-size: 3em !important;
   color: #be6adf !important;
   font-weight: 600 !important;
 }
@@ -454,8 +456,8 @@ button:focus {
 /* --------- */
 .project-section {
   position: relative !important;
-  padding-top: 150px !important;
-  padding-bottom: 30px !important;
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
   /* background-image: var(--image-gradient), url(./Assets/home-bg.jpg);
   background-position: top center;
   background-size: cover; */
@@ -463,7 +465,7 @@ button:focus {
 }
 
 .project-card {
-  padding-top: 50px !important;
+  padding-top: 20px !important;
   padding-bottom: 50px !important;
   padding-left: 25px !important;
   padding-right: 25px !important;
@@ -621,15 +623,19 @@ button:focus {
 
 .resume-section {
   position: relative !important;
-  padding-top: 110px !important;
-  padding-bottom: 30px !important;
-  /* background-image: var(--image-gradient), url(./Assets/home-bg.jpg); */
+  padding-top: 20px !important;
+  padding-bottom: 0px !important;
   color: white !important;
+  /* background-image: var(--image-gradient), url(./Assets/homebg.jpg);
+  
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: fit !important; */
 }
 
 .resume {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   justify-content: center;
 }
 
@@ -774,6 +780,7 @@ button:focus {
 
 .scroll-icon {
   animation: bounce 2s infinite;  
+  -webkit-animation: bounce 2s infinite;
 }
 .hide-scroll-icon {
   display: none;

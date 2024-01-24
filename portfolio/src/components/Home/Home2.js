@@ -11,12 +11,12 @@ import {
 } from "react-icons/ai";
 
 import { TiSocialFlickrCircular } from "react-icons/ti";
-
+import DownButton from "../DownButton";
 function Home2() {
   
   return (
     <Container fluid className="home-about-section" id="home">
-      <Container>
+      <Container id="home2">
         <Row>
           <Col md={8} className="home-about-description">
             <h1 style={{ fontSize: "2.6em" }}>
@@ -106,8 +106,8 @@ function Home2() {
             </ul>
           </Col>
         </Row>
+        <DownButton scrollToElement="about" offsetElement={110} style={{ paddingTop: "30px" }}/>
       </Container>
-      
     </Container>
   );
 }

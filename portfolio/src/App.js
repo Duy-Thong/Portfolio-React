@@ -37,7 +37,6 @@ function App() {
       </Helmet>
       <Preloader load={load} />
       <div className="App" id={load ? "no-scroll" : "scroll"}>
-        <Practicle />
         <Navbar />
         <Home />
         <About />

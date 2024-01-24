@@ -9,6 +9,7 @@ import sv5t from "../../Assets/Certs/sv5t.jpg";
 import juntion from "../../Assets/Certs/juntion.png";
 import { AiFillDownCircle } from "react-icons/ai";
 import { useEffect, useState } from "react";
+import DownButton from "../DownButton";
 function Cert() {
   const [showScrollIcon, setShowScrollIcon] = useState(true);
   const handleScroll = () => {
@@ -83,11 +84,8 @@ function Cert() {
               description="I became the media ambassador of hackathon JuntionXHanoi 2023. I participated in posting content and communication for the event."
             />
           </Col>
-
-          <Row className={`scroll-icon ${showScrollIcon ? "" : "hide-scroll-icon"}`}>
-            <AiFillDownCircle size={35} color="purple" />
-          </Row>
         </Row>
+        <DownButton scrollToElement="resume" offsetElement={-30} />
       </Container>
     </Container>
   );

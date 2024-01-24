@@ -8,9 +8,9 @@ import { AiOutlineDownload, AiOutlineFundView } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import { SiCodereview } from "react-icons/si";
-import CVfind from "../../Assets/../Assets/resume_detail.png"
+import DownButton from "../DownButton";
+import CVfind from "../../Assets/../Assets/resume_detail.png";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
-
 function ResumeNew() {
   const [width, setWidth] = useState(1200);
 
@@ -20,19 +20,17 @@ function ResumeNew() {
 
   return (
     <div>
-      <Container fluid className="resume-section" id="resume">
-        <Particle />
-        <Row>
+      <Container fluid className="resume-section" id="resume" >
+        <Row style={{paddingTop:"0px", marginTop:"0px"}}>
           <p className="resume-title" style={{ fontSize: "2.5em" }}>
-            My <span className="purple"> Resume</span>
+            My <span className="purple" style={{fontStyle:"bold"}}> Resume</span>
           </p>
           <br />
         </Row>
-
-        <Row style={{ justifyContent: "center", position: "relative" }}>
-          <Col md={7} style={{ textAlign: "center",paddingLeft:"50px" }}>
+        <Row style={{ justifyContent: "center", position: "relative" ,marginBottom:"50px"}}>
+          <Col md={7} style={{ textAlign: "center", paddingLeft: "50px" }}>
             <p> Resume Preview </p>
-            <img src={cvpng} alt="resume" style={{ maxWidth: "100%" ,marginLeft:"50px" }} />
+            <img src={cvpng} alt="resume" style={{ maxWidth: "80%", marginLeft: "50px" }} />
           </Col>
           <Col md={5} style={{ alignSelf: "center", paddingRight: "50px", textAlign: "center" }}>
             <Row className="align-items-center justify-content-center">
@@ -43,7 +41,7 @@ function ResumeNew() {
                 variant="primary"
                 href={pdf}
                 target="_blank"
-                style={{ maxWidth: "250px", paddingTop: "10px", marginTop: "20px",maxHeight:"50px" }}
+                style={{ maxWidth: "250px", paddingTop: "10px", marginTop: "20px", maxHeight: "50px" }}
               >
                 <SiCodereview />
                 &nbsp;View full resume
@@ -51,6 +49,7 @@ function ResumeNew() {
             </Row>
           </Col>
         </Row>
+        <DownButton scrollToElement="contactme" offsetElement="200"/>
       </Container>
     </div>
   );

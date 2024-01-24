@@ -7,6 +7,7 @@ import automail from "../../Assets/Projects/2.png";
 import shopping from "../../Assets/Projects/3.png";
 import { AiFillDownCircle } from "react-icons/ai";
 import { useEffect, useState } from "react";
+import DownButton from "../DownButton";
 function Projects() {
   const [showScrollIcon, setShowScrollIcon] = useState(true);
 
@@ -36,7 +37,7 @@ function Projects() {
         <p style={{ color: "white" }}>
           Here are a few projects I've worked on recently.
         </p>
-        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+        <Row style={{ justifyContent: "center", paddingBottom: "0px" ,paddingTop:"0px", marginTop:"0px"}}>
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={attendace}
@@ -56,7 +57,6 @@ function Projects() {
               ghLink="https://github.com/The-White-Bear/Email-Automation-Python"
             />
           </Col>
-
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={shopping}
@@ -67,9 +67,7 @@ function Projects() {
             />
           </Col>
         </Row>
-        <Row className={`scroll-icon ${showScrollIcon ? "" : "hide-scroll-icon"}`}>
-          <AiFillDownCircle size={35} color="purple" />
-        </Row>
+        <DownButton scrollToElement="certificates" offsetElement={0} style={{paddingTop:"0px", marginTop:"0px"}} />
       </Container>
     </Container>
   );

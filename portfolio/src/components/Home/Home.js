@@ -8,6 +8,8 @@ import { AiFillDownCircle } from "react-icons/ai";
 import { useEffect, useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { AiOutlineMessage } from "react-icons/ai";
+import ChillCode from "../../Assets/ChillCode.mp4";
+import DownButton from "../DownButton";
 function Home() {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
@@ -29,13 +31,15 @@ function Home() {
     };
   }, []); // Empty dependency array ensures that the effect runs only once during mount
   return (
-    <section id="home">
-      <Container fluid className="home-section"  >
+    
+      <Container fluid className="home-section" id="home"  >
+      <Container fluid>
         <Particle />
-        <Container className="home-content" style={{ paddingTop: "-100px", marginTop: "-50px" }} >
+        <Container className="home-content" style={{
+          paddingTop: "-100px", marginTop: "-50px", marginBottom: "0px"  }} >
           <Row>
-            <Col md={7} className="home-header">
-              <h1 style={{ paddingBottom: 15 }} className="heading">
+            <Col md={6} className="home-header">
+              <h1 style={{ paddingBottom: 15,fontSize: "2.5em" }} className="heading">
                 Hi There!{" "}
                 <span className="wave" role="img" aria-labelledby="wave">
                   👋🏻
@@ -45,47 +49,22 @@ function Home() {
                 I'M
                 <strong className="main-name"> DAO DUY THONG </strong>
               </h1>
-              <div style={{ padding: 50, textAlign: "left" }}>
+              <div style={{ padding: 50, textAlign: "left"}}>
                 <Type />
               </div>
             </Col>
 
-            <Col md={5} style={{ paddingBottom: 20 }}>
-              <img
-                src={gif}
-                alt="home pic"
-                className="img-fluid"
-                style={{ maxHeight: "1700px" }}
-              />
+            <Col md={6} style={{ paddingBottom: 20 }}>
+              <img src={gif} className="img-fluid" alt="home pic" style={{ width: "90%",height:'90%' }} />
             </Col>
           </Row>
           
-        </Container>\
-        {/* <Row style={{ alignSelf: "center", position: "relative",color: "white",paddingTop: "50px" ,fontFamily:"courier"}}>
-          <p >Click to the screen to make a star!</p>
-        </Row> */}
-        <Row className="scroll-icon" >
-          <ScrollLink
-            style={{ color: "white", paddingTop: "80px" }}
-            activeClass="active"
-            to="contactme"
-            spy={true}
-            smooth={true}
-            offset={80}
-            duration={500}
-            onClick={() => updateExpanded(false)}
-          >
-            <AiFillDownCircle
-              style={{ color: "purple", marginTop: "40px" }}
-              size={35}
-            />
-          </ScrollLink>
-
-        </Row>
+        </Container>
+        <DownButton scrollToElement="home2" offsetElement="0"/>
       </Container>
 
       <Home2 />
-    </section>
+    </Container>
   );
 }
 

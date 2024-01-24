@@ -9,6 +9,7 @@ import Toolstack from "./Toolstack";
 import Softskills from "./Softskills";
 import { AiFillDownCircle } from "react-icons/ai";
 import { useEffect, useState } from "react";
+import DownButton from "../DownButton";
 function About() {
   const [showScrollIcon, setShowScrollIcon] = useState(true);
 
@@ -34,7 +35,7 @@ function About() {
     <Container fluid className="about-section" id="about">
       <Particle />
       <Container>
-        <Row style={{ justifyContent: "center", padding: "10px" }}>
+        <Row style={{ justifyContent: "center", padding: "0px" }}>
           <Col
             md={7}
             style={{
@@ -55,19 +56,13 @@ function About() {
           >
             <img src={laptopImg} alt="about" className="img-fluid" />
           </Col>
-          <Row className={`scroll-icon ${showScrollIcon ? "" : "hide-scroll-icon"}`}>
-            <AiFillDownCircle size={35} color="purple" />
-          </Row>
-          <Row className="mt-5">
-            <p> </p>
-          </Row>
         </Row>
-
+        <DownButton scrollToElement="tech" offsetElement={-110} style={{paddingTop: "-10px"}} />
         <h1 className="project-heading">
           Professional <strong className="purple">Skillset </strong>
         </h1>
 
-        <Techstack />
+        <Techstack id="tech"/>
 
         <h1 className="project-heading">
           <strong className="purple">Tools</strong> I use
@@ -81,10 +76,9 @@ function About() {
         <Softskills />
 
         <Github />
-        <Row className={`scroll-icon ${showScrollIcon ? "" : "hide-scroll-icon"}`}>
-          <AiFillDownCircle size={35} color="purple" />
-        </Row>
+        <DownButton scrollToElement="projects" offsetElement={0} style={{paddingTop: "-10px"}} />
       </Container>
+      
     </Container>
   );
 }

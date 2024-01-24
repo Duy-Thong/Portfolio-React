@@ -35,7 +35,7 @@ function NavBar() {
     >
       <Container style={{paddingTop:"10px"}}>
         <Navbar.Brand href="/" className="d-flex">
-          <img src={logo} className="img-fluid logo" alt="brand" />
+          <img src={logo} className="img-fluid logo" alt="brand" style={{width:"100%"}}/>
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
@@ -86,7 +86,7 @@ function NavBar() {
                 to="projects"
                 spy={true}
                 smooth={true}
-                offset={80}
+                offset={0}
                 duration={500}
                 onClick={() => updateExpanded(false)}
               >
@@ -101,7 +101,7 @@ function NavBar() {
                 to="certificates"
                 spy={true}
                 smooth={true}
-                offset={80}
+                offset={0}
                 duration={500}
                 onClick={() => updateExpanded(false)}
               >
