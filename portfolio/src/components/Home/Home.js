@@ -60,7 +60,7 @@ function Home() {
           </Row>
 
         </Container>
-        <DownButton scrollToElement="home2" offsetElement={10} style={{paddingTop:"30px"}} />
+        <DownButton scrollToElement="home2" offsetElement={20} style={{paddingTop:"30px"}} />
       </Container>
 
       <Home2 />

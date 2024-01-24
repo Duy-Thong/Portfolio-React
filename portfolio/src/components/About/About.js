@@ -45,7 +45,7 @@ function About() {
             }}
           >
             <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
-              More About <strong className="purple">Myself</strong>
+              MORE ABOUT <strong className="purple">MYSELF</strong>
             </h1>
             <Aboutcard />
           </Col>
