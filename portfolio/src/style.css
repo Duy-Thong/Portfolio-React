@@ -623,7 +623,7 @@ button:focus {
 
 .resume-section {
   position: relative !important;
-  padding-top: 20px !important;
+  padding-top: 50px !important;
   padding-bottom: 0px !important;
   color: white !important;
   /* background-image: var(--image-gradient), url(./Assets/homebg.jpg);
@@ -634,8 +634,8 @@ button:focus {
 }
 
 .resume {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   justify-content: center;
 }
 

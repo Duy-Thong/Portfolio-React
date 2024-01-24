@@ -20,21 +20,21 @@ function ResumeNew() {
 
   return (
     <div>
-      <Container fluid className="resume-section" id="resume" >
-        <Row style={{paddingTop:"0px", marginTop:"0px"}}>
+      <Container fluid className="resume-section" id="resume">
+        <Row >
           <p className="resume-title" style={{ fontSize: "2.5em" }}>
-            My <span className="purple" style={{fontStyle:"bold"}}> Resume</span>
+            My <strong className="purple">Resume</strong>
           </p>
           <br />
         </Row>
         <Row style={{ justifyContent: "center", position: "relative" ,marginBottom:"50px"}}>
           <Col md={7} style={{ textAlign: "center", paddingLeft: "50px" }}>
             <p> Resume Preview </p>
-            <img src={cvpng} alt="resume" style={{ maxWidth: "80%", marginLeft: "50px" }} />
+            <img src={cvpng} alt="resume" style={{ maxWidth: "80%" }} />
           </Col>
           <Col md={5} style={{ alignSelf: "center", paddingRight: "50px", textAlign: "center" }}>
             <Row className="align-items-center justify-content-center">
-              <img src={CVfind} style={{ maxWidth: "55%" }} alt="resume details" />
+              <img src={CVfind} style={{ maxWidth: "65%" }} alt="resume details" />
             </Row>
             <Row className="align-items-center justify-content-center" style={{ marginTop: "20px" }}>
               <Button
@@ -49,7 +49,7 @@ function ResumeNew() {
             </Row>
           </Col>
         </Row>
-        <DownButton scrollToElement="contactme" offsetElement={120}/>
+        <DownButton scrollToElement="contactme" offsetElement={130}/>
       </Container>
     </div>
   );

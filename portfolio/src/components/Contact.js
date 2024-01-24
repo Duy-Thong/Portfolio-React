@@ -49,14 +49,7 @@ export default function ContactUs() {
 
 
     return (
-        <Container style={{ paddingTop:'0px', marginTop:'0px' }} id='contactme' >
-            <Row className='mt-5'>
-                <p> </p>
-            </Row>
-            <Row className='mt-5'>
-                <p> </p>
-            </Row>
-
+        <Container style={{ paddingTop:'100px'}} id='contactme' >
             <Row className="mb-5 mt-3">
                 <Col lg="8">
                     <h1 className="display-4 mb-4" style={{ paddingTop: '80px', color: 'white' }}>Contact <strong className="purple">Me</strong> <span class="wave">👋</span></h1>
@@ -199,7 +192,6 @@ export default function ContactUs() {
                             </Col>
                         </Row>
                     </form>
-
                 </Col>
             </Row>
             <Row className="mt-5">
