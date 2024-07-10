@@ -5,6 +5,7 @@ import Particle from "../Particle";
 import attendace from "../../Assets/Projects/1.png";
 import automail from "../../Assets/Projects/2.png";
 import shopping from "../../Assets/Projects/3.png";
+import soMedia from "../../Assets/Projects/4.png";
 import { AiFillDownCircle } from "react-icons/ai";
 import { useEffect, useState } from "react";
 import DownButton from "../DownButton";
@@ -28,7 +29,7 @@ function Projects() {
     };
   }, []);
   return (
-    <Container fluid className="project-section" id="projects"> 
+    <Container fluid className="project-section" id="projects">
       <Particle />
       <Container>
         <h1 className="project-heading">
@@ -37,24 +38,23 @@ function Projects() {
         <p style={{ color: "white" }}>
           Here are a few projects I've worked on recently.
         </p>
-        <Row style={{ justifyContent: "center", paddingBottom: "0px" ,paddingTop:"0px", marginTop:"0px"}}>
+        <Row style={{ justifyContent: "center", paddingBottom: "0px", paddingTop: "0px", marginTop: "0px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={attendace}
               isBlog={false}
               title="Attendance using Face Recognition"
               description="Use Face recognition for attendance in class, company,... If anyone not present in the class more than 2 times, it will automatically send an email to notice. "
-              ghLink="https://github.com/The-White-Bear/Attendance_Face_Recog_and_Email"
+              ghLink="https://github.com/Duy-Thong/Attendance_Face_Recog_and_Email"
             />
           </Col>
-
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={automail}
               isBlog={false}
               title="Email Automation"
               description="My personal app to auto send email in a list ( from xlsx file ) using python. It takes the content from html or txt files and renders it using python. With variables as recipient name, subject and content. "
-              ghLink="https://github.com/The-White-Bear/Email-Automation-Python"
+              ghLink="https://github.com/Duy-Thong/Email-Automation-Python"
             />
           </Col>
           <Col md={4} className="project-card">
@@ -66,8 +66,17 @@ function Projects() {
               ghLink="https://github.com/Shodydosh/BE_JAVA_BTL"
             />
           </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={soMedia}
+              isBlog={false}
+              title="So Media Website"
+              description="A website for my club, So Media."
+              ghLink="https://github.com/Duy-Thong/SoMedia-Website"
+            />
+          </Col>
         </Row>
-        <DownButton scrollToElement="certificates" offsetElement={-30} style={{paddingTop:"0px", marginTop:"0px"}} />
+        <DownButton scrollToElement="certificates" offsetElement={-30} style={{ paddingTop: "0px", marginTop: "0px" }} />
       </Container>
     </Container>
   );
