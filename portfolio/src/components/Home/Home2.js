@@ -14,14 +14,14 @@ import {
 import { TiSocialFlickrCircular } from "react-icons/ti";
 import DownButton from "../DownButton";
 function Home2() {
-  
+
   return (
     <Container fluid className="home-about-section" id="home">
       <Container id="home2">
-        <Row style={{paddingBottom:"0px"}}>
+        <Row style={{ paddingBottom: "0px" }}>
           <Col md={4} className="myAvtar">
             <Tilt>
-              <img src={myImg1} className="img-fluid" alt="avatar" style={{width:"350px"}} />
+              <img src={myImg1} className="img-fluid" alt="avatar" style={{ width: "350px" }} />
             </Tilt>
           </Col>
           <Col md={8} className="home-about-description">
@@ -30,25 +30,23 @@ function Home2() {
             </h1>
             <p className="home-about-body">
               I am a student studying information technology at PTIT (Posts
-                    and Telecommunications Institute of Technology), Hanoi, Vietnam.  
-              <br />
-              <br />I am
-                    passionate about finding creative solutions to 
+              and Telecommunications Institute of Technology), Hanoi, Vietnam.
+              I am
+              passionate about finding creative solutions to
               <i>
                 <b className="purple"> real world
-                    problems. </b>
+                  problems. </b>
               </i>
-              <br />
-              <br />
+
               I especially enjoy applying technology to tasks
-                    that I realize can be automated.
-                  <br />
+              that I realize can be automated.
+              <br />
               Whenever possible, I also learn new things and use them to improve my skills, both technical and soft.
             </p>
           </Col>
-          
+
         </Row>
-        <Row style={{ paddingTop:"-10px" }}>
+        <Row style={{ paddingTop: "-10px" }}>
           <Col md={12} className="home-about-social">
             <h1>FIND ME ON</h1>
             <p>
@@ -62,7 +60,7 @@ function Home2() {
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
                 >
-                  <AiFillGithub size={25}/>
+                  <AiFillGithub size={25} />
                 </a>
               </li>
               <li className="social-icons">
@@ -108,7 +106,7 @@ function Home2() {
             </ul>
           </Col>
         </Row>
-        <DownButton scrollToElement="about" offsetElement={110} style={{ paddingTop: "30px" }}/>
+        <DownButton scrollToElement="about" offsetElement={110} style={{ paddingTop: "30px" }} />
       </Container>
     </Container>
   );

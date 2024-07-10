@@ -49,7 +49,7 @@ export default function ContactUs() {
 
 
     return (
-        <Container style={{ paddingTop:'100px'}} id='contactme' >
+        <Container style={{ paddingTop: '100px' }} id='contactme' >
             <Row className="mb-5 mt-3">
                 <Col lg="8">
                     <h1 className="display-4 mb-4" style={{ paddingTop: '80px', color: 'white' }}>Contact <strong className="purple">Me</strong> <span class="wave">👋</span></h1>
@@ -92,7 +92,7 @@ export default function ContactUs() {
                     <ul className="home-about-social-links">
                         <li className="social-icons">
                             <a
-                                href="https://github.com/The-White-Bear"
+                                href="https://github.com/Duy-Thong"
                                 target="_blank"
                                 rel="noreferrer"
                                 className="icon-colour  home-social-icons"

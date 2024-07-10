@@ -8,11 +8,6 @@ function CertCards(props) {
       <Card.Img variant="top" src={props.imgPath} alt="card-img" style={{ maxHeight: "300px" }} />
       <Card.Body>
         <Card.Title>{props.title}</Card.Title>
-        <Card.Text style={{ textAlign: "justify" }}>
-          {props.description}
-        </Card.Text>
-        {"\n"}
-        {"\n"}
       </Card.Body>
     </Card>
   );
