@@ -1,0 +1,29 @@
+# Sử dụng node image để làm môi trường chạy ứng dụng
+FROM node:16-alpine
+
+# Đặt biến môi trường
+ENV NODE_ENV=production
+
+# Tạo thư mục ứng dụng trong container
+WORKDIR /app
+
+# Sao chép file package.json và package-lock.json vào thư mục làm việc
+COPY package*.json ./
+
+# Cài đặt các dependencies bao gồm cả react-scripts
+RUN npm install
+
+# Sao chép toàn bộ mã nguồn vào container
+COPY . .
+
+# Build ứng dụng React
+RUN npm run build
+
+# Cài đặt gói `serve` để chạy ứng dụng đã build
+RUN npm install -g serve
+
+# Expose cổng mà ứng dụng chạy
+EXPOSE 3000
+
+# Chạy ứng dụng sử dụng `serve`
+CMD ["serve", "-s", "build", "-l", "3000"]
